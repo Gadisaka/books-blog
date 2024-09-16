@@ -1,0 +1,45 @@
+<%- include("partials/header.ejs") %>
+<h1 class="add-new-title">ADD NEW BOOK</h1>
+<div class="new-container">
+    <div >
+        <form action="/get" method="post">
+            <label for="book-name">Title: </label>
+            <textarea name="title_1" rows="1" cols="10" id="book-name" ></textarea>
+            <input type="submit" value="Search">
+            <div>
+                <% if (locals.title) { %>
+                <img src="<%= coverImage %>" alt="<%= title %>">
+                <h2 name="btitle"><%= title %> - <%= authorName %></h2>
+                <% } %>
+                <% if (locals.error) { %>
+                 <h2><%= error %></h2>
+                <% } %>
+            </div>
+        </form>
+    </div>
+  <form action="/create" method="post"> 
+    <div>
+        <label for="description">Note:</label><br>
+        <textarea id="description" name="note" rows="5" cols="40" placeholder="Enter your note here..."></textarea><br>
+
+        <label for="description">Summary:</label><br>
+        <textarea id="description" name="summary" rows="10" cols="80" placeholder="Enter your summary here..."></textarea><br>
+        
+        <label for="number">Select a Rating:</label>
+        <select id="number" name="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>  
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+    </div>
+    <input type="submit" value="Add Book">
+</form>  
+</div>
+

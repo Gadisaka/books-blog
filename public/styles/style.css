@@ -1,0 +1,240 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container,.summary {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #333;
+    padding: 20px;
+    background-color: #111;
+    margin-bottom: 20px;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #333;
+    padding: 20px;
+    background-color: #111;
+    margin-bottom: 20px;
+}
+
+.title{
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+.title h1{
+    font-size: 5em;
+}
+
+.title p {
+    width: 500px;
+    font-size: large;
+}
+
+.book-cover img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.content,.summary {
+    max-width: 600px;
+}
+
+h1 {
+    color: #7A7AFF;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.date-read {
+    font-style: italic;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.rating {
+    color: #f9d342;
+}
+
+.description {
+    margin-bottom: 15px;
+}
+
+.notes-link, .amazon-link {
+    color: #9078e8;
+    text-decoration: none;
+}
+
+.notes-link:hover, .amazon-link:hover {
+    text-decoration: underline;
+}
+
+.edit{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: max-content;
+    height: 2em;
+    cursor: pointer;
+}
+.edit:hover{
+    background-color: rgb(10, 10, 183);
+}
+
+.delete{
+    color: white;
+    border: none;
+    background-color: red;
+    border-radius: 20px;
+    width: max-content;
+    height: 2em;
+    cursor: pointer;
+}
+.update-btn{
+    color: white;
+    border: none;
+    background-color: blue;
+    border-radius: 20px;
+    width: max-content;
+    height: 2em;
+    cursor: pointer;
+}
+
+.delete:hover{
+    background-color: rgb(205, 0, 0);
+}
+
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.add-book button{
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    background-color: green;
+    border-radius: 20px;
+    width: max-content;
+    height: 2em;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.add-book button:hover{
+    background-color:rgb(3, 105, 3);
+}
+
+/* Centering the form */
+.new-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures it takes the full height of the viewport */
+    margin: 0; /* Removes default body margin */
+     /* Light background color for contrast */
+    font-family: Arial, sans-serif; /* Sets a clean font */
+}
+
+/* Styling the form container */
+.new-container form {
+    color: #5a40b7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 300px; /* Fixed width for the form */
+}
+.edit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures it takes the full height of the viewport */
+    margin: 0; /* Removes default body margin */
+     /* Light background color for contrast */
+    font-family: Arial, sans-serif; /* Sets a clean font */
+}
+
+/* Styling the form container */
+.edit-container form {
+    color: #5a40b7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 300px; /* Fixed width for the form */
+}
+
+.edit-container form h1{
+    color: white;
+}
+
+/* Styling form elements */
+form div {
+    margin-bottom: 15px; /* Spacing between form fields */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Makes the label text bold */
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%; /* Makes input elements take full width */
+    padding: 8px;
+    color:darkgray ;             /* Light border color */
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-size: 14px;
+    background-color: #111;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #007bff; /* Blue background for the button */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+input[type="text"],
+textarea{
+    background-color: #111;
+}
+
+.new-container img{
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.add-new-title{
+    text-align: center;
+}
+

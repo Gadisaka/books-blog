@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+<div class="title">
+    <h1>GZAC ELDAMA</h1>
+    <p>
+        Tiny summary but detailed notes for each. Use the ISBN number to find it from your local
+        library or anywhere else. This page will constantly update as I read more, so bookmark
+        it if you want to check back in a few months.
+    </p>
+</div>
+<div class="container">
+    <div class="book-cover">
+        <img src="<%= book.cover_image %>" alt="<%= book.title %>">
+    </div>
+    <div class="content">
+        <h1><%= book.title %> - by <%= book.author %></h1>
+        <p class="date-read">Date read: <%= book.date %>. How strongly I recommend it: <span class="rating"><%= book.rating %>/10</span></p>
+        <p class="description">
+            <%= book.note %>
+        </p>
+
+        <div class="btns">
+            <form action="/edit/<%= book.id %>" method="GET">
+                <button type="submit" class="edit" class="edit-btn">edit</button>
+            </form>
+            <form action="/delete/<%= book.id %>" method="POST">
+                <button type="submit" class="delete">Delete</button>
+              </form>
+              
+        </div>
+    </div>
+</div>
+
+<div class="summary">
+    <h1>SUMMARY</h1>
+    <p><%= book.summary %></p>
+    <h1>THANKS FOR READING.</h1>
+</div>
+
+

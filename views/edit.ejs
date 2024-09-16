@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<div class="edit-container">
+<form action="/edit/<%= book.id %>" method="POST">
+    <label for="title">Title</label>
+    <h1 id="title"><%= book.title %></h1>
+    
+    <label for="author">Author</label>
+    <h1 id="author"><%= book.author %></h1> 
+    <div class="book-cover">
+        <img src="<%= book.cover_image %>" alt="<%= book.title %>">
+    </div>
+    <label for="note">Note</label>
+    <textarea name="note" id="note"><%= book.note %></textarea>
+  
+    <label for="description">Summary:</label><br>
+    <textarea id="description" name="summary" rows="10" cols="80" placeholder="Enter your summary here..."><%= book.summary %></textarea><br>
+        
+    <label for="rating">Rating</label>
+    <input type="number" name="rating" id="rating" min="0" max="10" value="<%= book.rating %>">
+  
+    <button type="submit" class="update-btn">Update Book</button>
+  </form>
+    
+</div>
+  

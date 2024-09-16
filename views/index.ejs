@@ -1,0 +1,50 @@
+<%- include("partials/header.ejs") %>
+<body>
+<div class="title">
+    <h1>GZAC ELDAMA</h1>
+    <h2>BOOKS I'VE READ</h2>
+    <p>
+        Tiny summary but detailed notes for each. Use the ISBN number to find it from your local
+        library or anywhere else. This page will constantly update as I read more, so bookmark
+        it if you want to check back in a few months.
+    </p>
+    <form action="/new" method="post">
+        <div class="add-book">
+            <button type="submit" name="add" value="new">Add New Book</button>
+        </div>
+    </form>
+    
+</div>
+    <% for( let content of contents) { %>
+    <div class="container">
+        <div class="book-cover">
+            <img src="<%= content.cover_image %>" alt="<%= content.title %>">
+        </div>
+        <div class="content">
+            <form action="/note/<%= content.id %>" method="GET">
+                <button type="submit" style="background: none; border: none; color: inherit; font: inherit; cursor: pointer; padding: 0;">
+                  <h1><%= content.title %> - by <%= content.author %></h1>
+                </button>
+            </form>              
+            <p class="date-read">Date read: <%= content.date %>. How strongly I recommend it: <span class="rating"><%= content.rating %>/10</span></p>
+            <p class="description">
+                <%= content.note %>
+            </p>
+            <div class="btns">
+                <form action="/edit/<%= content.id %>" method="GET">
+                    <button type="submit" class="edit" class="edit-btn">edit</button>
+                </form>
+                <form action="/delete/<%= content.id %>" method="POST">
+                    <button type="submit" class="delete">Delete</button>
+                  </form>
+                  
+            </div>
+        </div>
+    </div>
+    <% } %>
+<% if (!locals.contents) { %>
+        <h1>NO BOOKS YET</h1>
+<% } %>
+    
+
+</body>
