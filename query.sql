@@ -8,10 +8,15 @@ create table book(
 	rating integer
 );
 
-
-
-INSERT INTO book(title , author , cover_image , note , date , rating) VALUES ($1 , $2 , $3 , $4 , $5 ,$6)
-
-
 select *
 from book
+
+INSERT INTO book(title , author , cover_image , note , date , rating , summary) VALUES ($1 , $2 , $3 , $4 , $5 ,$6 , $7)
+
+DELETE FROM book WHERE id = $1
+
+SELECT * FROM book WHERE id = $1
+
+UPDATE book SET note = $1, rating = $2 , summary = $3 WHERE id = $4
+
+SELECT * FROM book WHERE id = $1
